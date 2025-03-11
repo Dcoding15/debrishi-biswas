@@ -48,42 +48,42 @@
 		pointer-events: none;
 	}
     </style>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
 	<script>
 		document.addEventListener('contextmenu', function(event) {
             event.preventDefault();
         });
 
-element.addEventListener("keydown", function (e) {
-    if (e.key === "F12" || 
-        (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J"))) {
-        e.preventDefault();
-    }
-});
-	document.onkeydown = function(e) {
-	    if (e.ctrlKey && 
-	        (e.keyCode === 67 ||
-	        e.keyCode === 86 ||
-	        e.keyCode === 85 ||
-	        e.keyCode === 112 ||
-	        e.keyCode === 80 ||
-	        e.keyCode === 117)) {
-	        e.preventDefault();
-	        return false;
-	    } else {
-	        return true;
-	    }
-	};
-	setInterval(() => {
-	    if (document.hidden) {
-	        document.body.classList.add("blurred");
-	    } else {
-	        document.body.classList.remove("blurred");
-	    }
-	}, 1000);
+		document.addEventListener("keydown", function (e) {
+			if (e.key === "F12" || 
+				(e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J"))) {
+				e.preventDefault();
+			}
+		});
+		document.onkeydown = function(e) {
+			if (e.ctrlKey && 
+				(e.keyCode === 67 ||
+				e.keyCode === 86 ||
+				e.keyCode === 85 ||
+				e.keyCode === 112 ||
+				e.keyCode === 80 ||
+				e.keyCode === 117)) {
+				e.preventDefault();
+				return false;
+			} else {
+				return true;
+			}
+		};
+		setInterval(() => {
+			if (document.hidden) {
+				document.body.classList.add("blurred");
+			} else {
+				document.body.classList.remove("blurred");
+			}
+		}, 1000);
 	</script>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
-<body>
 	<div id="sbtwblk"></div>
 	<div class="container">
 		<div class="row">
@@ -435,7 +435,5 @@ element.addEventListener("keydown", function (e) {
 			
 			<div id="sbtwblk"></div>
 	</div>
-
-
 </body>
 </html>
