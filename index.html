@@ -49,36 +49,37 @@
 	}
     </style>
 	<script>
-document.addEventListener("contextmenu", event => event.preventDefault());
+element.addEventListener('contextmenu', function(e) { 
+  e.preventDefault();
+}, false);
 
-document.addEventListener("keydown", function (event) {
-    if (event.key === "F12" || 
-        (event.ctrlKey && event.shiftKey && (event.key === "I" || event.key === "J"))) {
-        event.preventDefault();
+element.addEventListener("keydown", function (e) {
+    if (e.key === "F12" || 
+        (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J"))) {
+        e.preventDefault();
     }
 });
-document.onkeydown = function(e) {
-    if (e.ctrlKey && 
-        (e.keyCode === 67 ||
-        e.keyCode === 86 ||
-        e.keyCode === 85 ||
-        e.keyCode === 112 ||
-        e.keyCode === 80 ||
-        e.keyCode === 117)) {
-        e.preventDefault();
-        return false;
-    } else {
-        return true;
-    }
-};
-setInterval(() => {
-    if (document.hidden) {
-        document.body.classList.add("blurred");
-    } else {
-        document.body.classList.remove("blurred");
-    }
-}, 1000);
-
+	document.onkeydown = function(e) {
+	    if (e.ctrlKey && 
+	        (e.keyCode === 67 ||
+	        e.keyCode === 86 ||
+	        e.keyCode === 85 ||
+	        e.keyCode === 112 ||
+	        e.keyCode === 80 ||
+	        e.keyCode === 117)) {
+	        e.preventDefault();
+	        return false;
+	    } else {
+	        return true;
+	    }
+	};
+	setInterval(() => {
+	    if (document.hidden) {
+	        document.body.classList.add("blurred");
+	    } else {
+	        document.body.classList.remove("blurred");
+	    }
+	}, 1000);
 	</script>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
